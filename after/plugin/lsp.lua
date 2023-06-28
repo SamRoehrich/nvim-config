@@ -1,11 +1,12 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp.preset({
+    manage_nvim_cmp = { set_sources = 'recommended' }
+})
 
 lsp.ensure_installed({
 	'tsserver',
 	'rust_analyzer',
-	'eslint',
 })
 
 -- Fix Undefined global 'vim'
